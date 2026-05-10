@@ -37,3 +37,16 @@ else:
 response=requests.get("https://jsonplaceholder.typicode.com/posts/1")
 data=response.json()
 print(data)
+
+# Post request 
+import requests
+url="https://jsonplaceholder.typicode.com/posts"
+data={
+      "title": "new post",
+      "body": "this is the body of the new post",
+      "userId":1
+}
+
+response=requests.post(url,json=data)
+print(response.status_code)
+print(response.json())
