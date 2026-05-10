@@ -50,3 +50,33 @@ data={
 response=requests.post(url,json=data)
 print(response.status_code)
 print(response.json())
+
+# login system with post request
+
+import requests
+
+url = "https://example.com/login"
+
+data = {
+    "username": "admin",
+    "password": "1234"
+}
+
+response = requests.post(url, json=data)
+
+print(response.status_code)
+print(response.json())
+
+#  create a block post
+
+import requests
+url="https://jsonplaceholder.typicode.com/posts"
+
+data={
+      "title": "my first blog post",
+      "body": "this is the body of my first blog post",
+      "userId":1
+}
+response=requests.post(url,json=data)
+print(response.status_code)
+print(response.json())
